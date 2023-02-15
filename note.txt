@@ -1,0 +1,49 @@
+1. npm init -y
+2. npm i express mongoose dotenv nodemon
+3. befor adding script start  rune application node index.js
+
+
+4. 
+const bcrypt = require("bcryptjs")
+const passwordHash = await(bcrypt.hash(req.body.password,10))
+    const comppassword = await(bcrypt.compare(req.body.password,"$2a$10$ahwLQcBExFWmsp7XuKxeXuGJzwK/0.h7cFicIa7vszGnXIqGN9Z7y"))
+    console.log(comppassword);
+
+var CryptoJS = require("crypto-js");
+
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+    decrypted.toString(CryptoJS.enc.Utf8)   // to converting hash pass to string
+
+
+5.
+const jwt = require("jsonwebtoken");
+const accessToken = jwt.sign(
+        {
+            id:user._id,
+            isAdmin:user.isAdmin
+        },
+        process.env.JWT_SEC,
+        {
+            expiresIn:"3d"
+        }  
+        )
+
+6.
+const date = new Date();
+const lastYear = new Date(date.setFullYear(date.getFullYear()-1))
+
+7.
+mongodb aggregates the  results of  the query   against the database 
+
+8.ffilter object  and array in javascript
+
+9.npm install redux
+
+10 .npm install @reduxjs/toolkit
+
+11.npm i react-redux
+
+
+
+
